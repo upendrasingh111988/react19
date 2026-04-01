@@ -26,13 +26,16 @@
 
     };
     return (
-        <div>
+        <div className="card">
             <h1>create user</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="text" name="username" placeholder="Username" value={user.username} onChange={handleChange} />
                 <input type="email" name="email" placeholder="Email" value={user.email} onChange={handleChange} />
                 <input type="number" name="age" placeholder="Age" value={user.age} onChange={handleChange} />
-                <button type="submit" onClick={handleSubmit}>Create User</button>
+                {/* <button type="submit" onClick={handleSubmit}>Create User</button> */}
+                <button className="btn-submit" type="submit">
+                    Create User
+                </button>
             </form>
         </div>
     )
