@@ -1,7 +1,9 @@
  import {use, useState}  from "react";
  import {createUser} from "../services/userService";
+ import { useNavigate } from "react-router-dom";
 
  function CreateUser() {
+    const navigate = useNavigate();
 
     const [user, setUser] = useState({
         username: "",
@@ -9,6 +11,7 @@
         age: ""
     });
     const handleChange= (event)=>{
+        
         setUser({
             ...user, [event.target.name]: event.target.value
         });
@@ -18,6 +21,7 @@
         event.preventDefault();
         try{
             await createUser(user);
+            navigate("/"); // Redirect to users list after successful creation
             alert("User created successfully");
 
         }catch(error){

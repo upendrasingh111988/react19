@@ -42,35 +42,8 @@ const UpdateUser = () => {
     if (!user) return <h2>No User Found</h2>;
 
     return (
-        // <div>
-        //     <h2>Update User</h2>
-
-        //     <form onSubmit={handleSubmit}>
-        //         <input
-        //             type="text"
-        //             name="username"
-        //             value={user.username || ""}
-        //             onChange={handleChange}
-        //         />
-
-        //         <input
-        //             type="email"
-        //             name="email"
-        //             value={user.email || ""}
-        //             onChange={handleChange}
-        //         />
-        //          <input
-        //             type="text"
-        //             name="age"
-        //             value={user.age || ""}
-        //             onChange={handleChange}
-        //         />
-
-        //         <button type="submit">Update</button>
-        //     </form>
-        // </div>
-
-        <div className="card">
+       
+    <div className="card">
   <h2>Update User</h2>
 
   <form onSubmit={handleSubmit}>
